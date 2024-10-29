@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Element in Array</title>
+    <script>
+      // let data = [20,10,40,20,14,5,4,8,63,4,2,33];
+      // let item = 33;
+      // item = parseInt(item);
+      // let index = undefined;
+      //   for(let i=0; i<=data.length-1; i++){
+      //     // console.log(data[i]);
+      //     if(data[i]===item){
+      //        index = i;
+      //        break;
+      //     }
+      //   }
+      //   console.log(index);
+      //by default method
+      //   console.log(data.indexOf(item));
+
+      //   //for delete element
+      //   data.splice(2,1)
+      //   console.log(data);
+
+      //for dynamic deletion
+
+      function searchElement() {
+        let data = [20, 10, 40, 20, 14, 5, 4, 8, 63, 4, 2, 33];
+        let item = document.getElementById("searchEl").value;
+        let index = undefined;
+        for (let i = 0; i <= data.length - 1; i++) {
+          // console.log(data[i]);
+          if (data[i] === parseInt(item)) {
+            index = i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter value" id="searchEl" />
+    <button onclick="searchElement()">Search Element</button>
+  </body>
+</html>
